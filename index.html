@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Newsletter Rafa Hidalgo</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #282c34;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background-color: #1c1f23;
+            padding: 20px 0;
+            border-bottom: 4px solid #ff4757;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #3b3f45;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin: 20px 0;
+        }
+
+        input[type="email"] {
+            width: 80%;
+            padding: 12px;
+            border: 2px solid #ff4757;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff4757;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #e84118;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Newsletter Rafa Hidalgo</h1>
+</header>
+
+<div class="container">
+    <p>¡Suscríbete a nuestra newsletter para recibir las últimas noticias sobre películas, reseñas y estrenos!</p>
+
+    <form id="newsletterForm">
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+        </div>
+        <button type="submit">Suscribirse</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 Newsletter Rafa Hidalgo. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        alert(`Gracias por suscribirte, ${email}!`);
+        document.getElementById('newsletterForm').reset();
+    });
+</script>
+
+</body>
+</html>
